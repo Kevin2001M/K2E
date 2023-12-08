@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace K2E.View.Controllers
+namespace K2E.View.Areas.Admin.Controllers
 {
     public class HomeController : Controller
     {
