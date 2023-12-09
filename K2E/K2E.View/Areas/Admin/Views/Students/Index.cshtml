@@ -1,0 +1,61 @@
+﻿@model List<K2E.Entities.Student>
+@{
+    ViewBag.Title = "Index";
+}
+
+<main>
+
+    <div class="col-12 bg-dark">
+        <div class="card">
+            <div class="card-body">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item" aria-current="page">@Html.ActionLink("Estudiantes", "Index", "Students")</li>
+                        <li class="breadcrumb-item active" aria-current="page">Listado</li>
+                    </ol>
+                </nav>
+
+                <div class="row">
+                    <div class="col-12 table table-responsive">
+
+                        @Html.ActionLink("Nuevo", "Create", "Students", null, new { @class = "btn btn-outline-primary" })
+
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Email</th>
+                                    <th>Nombre</th>
+                                    <th>Nacionalidad</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                <tr>
+                                    <td>@item.StudentId</td>
+                                    <td>@item.Email</td>
+                                    <td>@item.Nombre</td>
+                                    <td>@item.Nacionalidad</td>
+                                    <td>
+                                        @*@Html.ActionLink("Editar", "Edit", "Categories", new { id = item.CategoryId }, new { @class = "text-warning" })
+            @Html.ActionLink("Eliminar", "Delete", "Categories", new { id = item.CategoryId }, new { @class = "text-danger" })*@
+
+                                        <a href="/Admin/Students/Edit/@item.StudentId" class="text-warning"><i class="fas fa-edit"></i>Editar</a>
+                                        <a href="/Admin/Students/Delete/@item.StudentId" class="text-danger"><i class="fas fa-trash"></i>Eliminar</a>
+                                    </td>
+                                </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</main>

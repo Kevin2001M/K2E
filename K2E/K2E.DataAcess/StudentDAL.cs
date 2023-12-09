@@ -33,6 +33,7 @@ namespace K2E.DataAcess
             return Save() > 0;
         }
 
+
         public bool Update(Student entity)
         {
             Student query = GetById(entity.StudentId);  //db
