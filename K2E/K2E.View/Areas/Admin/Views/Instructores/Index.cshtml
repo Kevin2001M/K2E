@@ -1,0 +1,72 @@
+﻿@model List<K2E.Entities.Instructor>
+@{
+    ViewBag.Title = "Index";
+}
+
+<main>
+
+    <div class="col-12 bg-dark">
+        <div class="card">
+            <div class="card-body">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item" aria-current="page">@Html.ActionLink("Instructores", "Index", "Instructores")</li>
+                        <li class="breadcrumb-item active" aria-current="page">Listado</li>
+                    </ol>
+                </nav>
+
+                <div class="row">
+                    <div class="col-12 table table-responsive">
+
+                        @Html.ActionLink("Nuevo", "Create", "Instructores", null, new { @class = "btn btn-outline-primary" })
+
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Nombre</th>
+                                    <th>Especial</th>
+                                    <th>sobremi</th>
+                                    <th>urlsite</th>
+                                    <th>urlx</th>
+                                    <th>urllink</th>
+                                    <th>urlyt</th>
+                                    <th>urlfb</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.InstructorId</td>
+                                        <td>@item.Nombre</td>
+                                        <td>@item.TituloEspecialidad</td>
+                                        <td>@item.SobreMi</td>
+                                        <td>@item.UrlSite</td>
+                                        <td>@item.UrlX</td>
+                                        <td>@item.UrlLink</td>
+                                        <td>@item.UrlYt</td>
+                                        <td>@item.UrlFb</td>
+
+                                        <td>
+                                            @*@Html.ActionLink("Editar", "Edit", "Categories", new { id = item.CategoryId }, new { @class = "text-warning" })
+                                                @Html.ActionLink("Eliminar", "Delete", "Categories", new { id = item.CategoryId }, new { @class = "text-danger" })*@
+
+                                            <a href="/Admin/Instructores/Edit/@item.InstructorId" class="text-warning"><i class="fas fa-edit"></i>Editar</a>
+                                            <a href="/Admin/Instructores/Delete/@item.InstructorId" class="text-danger"><i class="fas fa-trash"></i>Eliminar</a>
+                                        </td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</main>

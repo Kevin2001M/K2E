@@ -1,0 +1,99 @@
+﻿@model K2E.Entities.Instructor
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h2>Create</h2>
+
+<main>
+    <div class="col-12 bg-dark">
+        <div class="card">
+            <div class="card-body">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item" aria-current="page">@Html.ActionLink("Instructores", "Index", "Instructores")</li>
+                        <li class="breadcrumb-item active" aria-current="page">Editar instructor</li>
+                    </ol>
+                </nav>
+
+                <div class="row" style="padding:15px">
+                    <form action="Edit" method="post">
+                        <div class="form-row">
+
+
+
+                            <div class="form-group mt-3">
+                                <label style="font-weight:bold;">Nombre</label>
+                            </div>
+                            <div class="form-group">
+                                <input style="background-color:white" type="text" name="nombre" class="form-control" value="@Model.Nombre" />
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <label style="font-weight:bold;">Titulo</label>
+                            </div>
+                            <div class="form-group">
+                                <input style="background-color:white" type="text" name="tituloespecialidad" class="form-control" required value="@Model.TituloEspecialidad" />
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <label style="font-weight:bold;">Sobre Mi</label>
+                            </div>
+                            <div class="form-group">
+                                <input style="background-color:white" type="text" name="sobremi" class="form-control" required value="@Model.SobreMi" />
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <label style="font-weight:bold;">UrlSite</label>
+                            </div>
+                            <div class="form-group">
+                                <input style="background-color:white" type="text" name="urlsite" class="form-control" required value="@Model.UrlSite" />
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <label style="font-weight:bold;">urlX</label>
+                            </div>
+                            <div class="form-group">
+                                <input style="background-color:white" type="text" name="urlx" class="form-control" required value="@Model.UrlX" />
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <label style="font-weight:bold;">urllink</label>
+                            </div>
+                            <div class="form-group">
+                                <input style="background-color:white" type="text" name="urllink" class="form-control" required value="@Model.UrlLink" />
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <label style="font-weight:bold;">urlyt</label>
+                            </div>
+                            <div class="form-group">
+                                <input style="background-color:white" type="text" name="urlyt" class="form-control" required value="@Model.UrlYt" />
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <label style="font-weight:bold;">urlf</label>
+                            </div>
+                            <div class="form-group">
+                                <input style="background-color:white" type="text" name="urlfb" class="form-control" required value="@Model.UrlFb" />
+                            </div>
+
+                            <div class="form-row mt-3">
+
+                                <input type="hidden" name="InstructorId" value="@Model.InstructorId" />
+
+                                <div class="form-group col-4 offset-lg-1">
+                                    <input type="submit" name="name" value="Guardar" class="btn btn-outline-primary" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</main>

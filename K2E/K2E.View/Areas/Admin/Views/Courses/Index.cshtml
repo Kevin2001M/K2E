@@ -1,0 +1,66 @@
+﻿@model List<K2E.Entities.Course>
+@{
+    ViewBag.Title = "Index";
+}
+
+<main>
+
+    <div class="col-12 bg-dark">
+        <div class="card">
+            <div class="card-body">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item" aria-current="page">@Html.ActionLink("Cursos", "Index", "Courses")</li>
+                        <li class="breadcrumb-item active" aria-current="page">Listado</li>
+                    </ol>
+                </nav>
+
+                <div class="row">
+                    <div class="col-12 table table-responsive">
+
+                        @Html.ActionLink("Nuevo", "Create", "Courses", null, new { @class = "btn btn-outline-primary" })
+
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Titulo</th>
+                                    <th>categoria</th>
+                                    <th>subtitulo</th>
+                                    <th>Fecha publicacion</th>
+                                    <th>Descripcion</th>
+                                    <th>Instructor</th>
+                                    <th>Portada</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.CursoId</td>
+                                        <td>@item.Titulo</td>
+                                        <td>@item.CategoriaId</td>
+                                        <td>@item.Subtitulo</td>
+                                        <td>@item.FechaPublicacion</td>
+                                        <td>@item.Descripcion</td>
+                                        <td>@item.InstructorId</td>
+                                        <td>@item.Portada</td>
+                                        <td>
+                                            <a href="/Admin/Courses/Edit/@item.CursoId" class="text-warning"><i class="fas fa-edit"></i>Editar</a>
+                                            <a href="/Admin/Categories/Delete/@item.CursoId" class="text-danger"><i class="fas fa-trash"></i>Eliminar</a>
+                                        </td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</main>

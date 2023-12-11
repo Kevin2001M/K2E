@@ -1,0 +1,97 @@
+﻿@model K2E.Entities.Course
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h2>Create</h2>
+
+<main>
+    <div class="col-12 bg-dark">
+        <div class="card">
+            <div class="card-body">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item" aria-current="page">@Html.ActionLink("Cursos", "Index", "Courses")</li>
+                        <li class="breadcrumb-item active" aria-current="page">Editar Categoria</li>
+                    </ol>
+                </nav>
+
+                <div class="row" style="padding:15px">
+                    <form action="Edit" method="post">
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label style="font-weight:bold">Titulo</label>
+                            </div>
+                            <div class="form-group">
+                                <input style="background-color:white" type="text" name="titulo" class="form-control" required value="@Model.Titulo" />
+                            </div>
+
+
+
+                            <div class="form-group">
+
+                                <label style="font-weight:bold">Categoria Id</label>
+                            </div>
+                            <div class="form-group">
+                                <input style="background-color:white" type="text" name="categoriaid" class="form-control" required value="@Model.CategoriaId" />
+                            </div>
+
+                            <div class="form-group">
+
+                                <label style="font-weight:bold">Subtitulo</label>
+                            </div>
+                            <div class="form-group">
+                                <input style="background-color:white" type="text" name="subtitulo" class="form-control" required value="@Model.Subtitulo" />
+                            </div>
+
+                            <div class="form-group">
+
+                                <label style="font-weight:bold">Fecha Publicacion</label>
+                            </div>
+                            <div class="form-group">
+                                <input style="background-color:white" type="text" name="fecha" class="form-control" required value="@Model.FechaPublicacion" />
+                            </div>
+
+                            <div class="form-group">
+
+                                <label style="font-weight:bold">Descripcion</label>
+                            </div>
+                            <div class="form-group">
+                                <input style="background-color:white" type="text" name="descripcion" class="form-control" required value="@Model.Descripcion" />
+                            </div>
+
+                            <div class="form-group">
+
+                                <label style="font-weight:bold">Instructor</label>
+                            </div>
+                            <div class="form-group">
+                                <input style="background-color:white" type="text" name="instructor" class="form-control" required value="@Model.InstructorId" />
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <label style="font-weight:bold;">Portada</label>
+                            </div>
+                            <div class="form-group">
+                                <input style="background-color:white" type="text" name="portada" class="form-control" required value="@Model.Portada" />
+                            </div>
+
+                            <div class="form-row mt-3">
+
+                                <input type="hidden" name="CourseId" value="@Model.CursoId" />
+
+                                <div class="form-group col-4 offset-lg-1">
+                                    <input type="submit" name="name" value="Guardar" class="btn btn-outline-primary" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</main>

@@ -1,0 +1,94 @@
+﻿@model List<K2E.Entities.Instructor>
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h2>Create</h2>
+
+<main>
+    <div class="col-12 bg-dark">
+        <div class="card">
+            <div class="card-body">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item" aria-current="page">@Html.ActionLink("Instructores", "Index", "Instructores")</li>
+                        <li class="breadcrumb-item active" aria-current="page">Nuevo instructor</li>
+                    </ol>
+                </nav>
+
+                <div class="row" style="padding:15px">
+                    <form action="Create" method="post">
+                        <div class="form-row">
+
+                            <div class="form-group mt-3">
+                                <label style="font-weight:bold;">Nombre</label>
+                            </div>
+                            <div class="form-group">
+                                <input style="background-color:white" type="text" name="nombre" class="form-control" placeholder="Escriba el nombre" />
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <label style="font-weight:bold;">Titulo</label>
+                            </div>
+                            <div class="form-group">
+                                <input style="background-color:white" type="text" name="tituloespecialidad" class="form-control" placeholder="Escriba la especialidad" />
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <label style="font-weight:bold;">Sobre Mi</label>
+                            </div>
+                            <div class="form-group">
+                                <input style="background-color:white" type="text" name="sobremi" class="form-control" placeholder="describase" />
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <label style="font-weight:bold;">UrlSite</label>
+                            </div>
+                            <div class="form-group">
+                                <input style="background-color:white" type="text" name="urlsite" class="form-control" placeholder="ingrese sitio web" />
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <label style="font-weight:bold;">urlX</label>
+                            </div>
+                            <div class="form-group">
+                                <input style="background-color:white" type="text" name="urlx" class="form-control" placeholder="ingrese su twitter" />
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <label style="font-weight:bold;">urllink</label>
+                            </div>
+                            <div class="form-group">
+                                <input style="background-color:white" type="text" name="urllink" class="form-control" placeholder="Escriba el link" />
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <label style="font-weight:bold;">urlyt</label>
+                            </div>
+                            <div class="form-group">
+                                <input style="background-color:white" type="text" name="urlyt" class="form-control" placeholder="Escriba link de yt" />
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <label style="font-weight:bold;">urlf</label>
+                            </div>
+                            <div class="form-group">
+                                <input style="background-color:white" type="text" name="urlfb" class="form-control" placeholder="Escriba su facebook" />
+                            </div>
+
+                            <div class="form-row mt-3">
+                                <div class="form-group col-4 offset-lg-1">
+                                    <input type="submit" name="name" value="Guardar" class="btn btn-outline-primary" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</main>
