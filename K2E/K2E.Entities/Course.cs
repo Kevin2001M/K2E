@@ -24,7 +24,7 @@ namespace K2E.Entities
         [StringLength(50)]
         public string Subtitulo { get; set; }
 
-        [Required]
+        
         public DateTime FechaPublicacion { get; set; }
 
         [Required]

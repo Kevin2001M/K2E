@@ -1,0 +1,46 @@
+﻿@model List<K2E.Entities.Rol>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h2>Create</h2>
+
+<main>
+    <div class="col-12 bg-dark">
+        <div class="card">
+            <div class="card-body">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item" aria-current="page">@Html.ActionLink("Rol", "Index", "Rols")</li>
+                        <li class="breadcrumb-item active" aria-current="page">Nueva Categoria</li>
+                    </ol>
+                </nav>
+
+                <div class="row" style="padding:15px">
+                    <form action="Create" method="post">
+                        <div class="form-row">
+                            <div class="form-group">
+
+                                <label style="font-weight:bold">Nombre</label>
+                            </div>
+                            <div class="form-group">
+                                <input style="background-color:white" type="text" name="nombre" class="form-control" required placeholder="Escriba el nombre del rol" />
+                            </div>
+
+                            <div class="form-row mt-3">
+                                <div class="form-group col-4 offset-lg-1">
+                                    <input type="submit" name="name" value="Guardar" class="btn btn-outline-primary" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</main>

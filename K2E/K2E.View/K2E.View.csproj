@@ -132,7 +132,9 @@
     <Compile Include="Areas\Admin\Controllers\CoursesController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\InstructoresController.cs" />
+    <Compile Include="Areas\Admin\Controllers\RolsController.cs" />
     <Compile Include="Areas\Admin\Controllers\StudentsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UsersController.cs" />
     <Compile Include="Controllers\InicioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -207,6 +209,12 @@
     <Content Include="Areas\Admin\Views\Instructores\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Instructores\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Instructores\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Rols\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Rols\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Rols\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\Edit.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
