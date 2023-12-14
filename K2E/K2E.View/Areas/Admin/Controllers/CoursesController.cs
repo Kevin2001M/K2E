@@ -45,7 +45,7 @@ namespace K2E.View.Areas.Admin.Controllers
             var selectInstructorListItems = instructors.Select(i => new SelectListItem
             {
                 Value = i.InstructorId.ToString(), // Asignar el valor deseado
-                Text = i.Nombre +", "+i.TituloEspecialidad // Concatenar el texto deseado
+                Text = i.Nombre //+", "+i.TituloEspecialidad // Concatenar el texto deseado
             }).ToList();
 
             // Puedes pasar las categorías al modelo de la vista
@@ -91,7 +91,7 @@ namespace K2E.View.Areas.Admin.Controllers
             var selectInstructorListItems = instructors.Select(i => new SelectListItem
             {
                 Value = i.InstructorId.ToString(), // Asignar el valor deseado
-                Text = i.Nombre + ", " + i.TituloEspecialidad // Concatenar el texto deseado
+                Text = i.Nombre// + ", " + i.TituloEspecialidad // Concatenar el texto deseado
             }).ToList();
 
             // Puedes pasar las categorías al modelo de la vista
