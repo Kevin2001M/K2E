@@ -7,13 +7,13 @@ namespace K2E.DataAcess.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class inicial : IMigrationMetadata
+    public sealed partial class courses : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(inicial));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(courses));
         
         string IMigrationMetadata.Id
         {
-            get { return "202311240127261_inicial"; }
+            get { return "202312141712154_courses"; }
         }
         
         string IMigrationMetadata.Source

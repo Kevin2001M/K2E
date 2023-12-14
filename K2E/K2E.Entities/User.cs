@@ -20,5 +20,9 @@ namespace K2E.Entities
         [Required(ErrorMessage = "El campo es requerido")]
         public int RolId { get; set; }
 
+        public Rol Rol { get; set; }
+
+       
+
     }
 }

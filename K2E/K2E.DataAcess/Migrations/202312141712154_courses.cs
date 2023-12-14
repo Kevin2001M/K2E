@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class inicial : DbMigration
+    public partial class courses : DbMigration
     {
         public override void Up()
         {
@@ -47,14 +47,18 @@
                     {
                         CursoId = c.Int(nullable: false, identity: true),
                         Titulo = c.String(nullable: false, maxLength: 25),
-                        CategoriaId = c.Int(nullable: false),
                         Subtitulo = c.String(nullable: false, maxLength: 50),
                         FechaPublicacion = c.DateTime(nullable: false),
                         Descripcion = c.String(nullable: false),
-                        InstructorId = c.Int(nullable: false),
                         Portada = c.String(nullable: false),
+                        CategoryId = c.Int(nullable: false),
+                        InstructorId = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.CursoId);
+                .PrimaryKey(t => t.CursoId)
+                .ForeignKey("dbo.Categories", t => t.CategoryId, cascadeDelete: true)
+                .ForeignKey("dbo.Instructors", t => t.InstructorId, cascadeDelete: true)
+                .Index(t => t.CategoryId)
+                .Index(t => t.InstructorId);
             
             CreateTable(
                 "dbo.Instructors",
@@ -111,12 +115,20 @@
                         Clave = c.String(nullable: false, maxLength: 30),
                         RolId = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.Email);
+                .PrimaryKey(t => t.Email)
+                .ForeignKey("dbo.Rols", t => t.RolId, cascadeDelete: true)
+                .Index(t => t.RolId);
             
         }
         
         public override void Down()
         {
+            DropForeignKey("dbo.Users", "RolId", "dbo.Rols");
+            DropForeignKey("dbo.Courses", "InstructorId", "dbo.Instructors");
+            DropForeignKey("dbo.Courses", "CategoryId", "dbo.Categories");
+            DropIndex("dbo.Users", new[] { "RolId" });
+            DropIndex("dbo.Courses", new[] { "InstructorId" });
+            DropIndex("dbo.Courses", new[] { "CategoryId" });
             DropTable("dbo.Users");
             DropTable("dbo.Titles");
             DropTable("dbo.Students");

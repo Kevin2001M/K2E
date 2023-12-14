@@ -17,10 +17,8 @@ namespace K2E.Entities
         [StringLength(25)]
         public string Titulo { get; set; }
 
-        [Required]
-        public int CategoriaId { get; set; }
 
-       [Required]
+        [Required]
         [StringLength(50)]
         public string Subtitulo { get; set; }
 
@@ -30,10 +28,17 @@ namespace K2E.Entities
         [Required]
         public string Descripcion { get; set; }
 
-        [Required]
-        public int InstructorId { get; set; }
 
         [Required]
         public string Portada { get; set; }
+
+
+        [Required]
+        public int CategoryId { get; set; }
+        public Category Category { get; set; }
+
+        [Required]
+        public int InstructorId { get; set; }
+        public Instructor Instructor { get; set; }
     }
 }

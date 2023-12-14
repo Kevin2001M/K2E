@@ -15,5 +15,7 @@ namespace K2E.Entities
         [Required(ErrorMessage = "El campo es requerido")]
         [StringLength(80)]
         public string Nombre { get; set; }
+
+        List<User> Users { get; set; }
     }
 }

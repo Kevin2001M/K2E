@@ -34,7 +34,7 @@ namespace K2E.DataAcess
         {
             Course query = GetById(entity.CursoId);  //db
             query.Titulo = entity.Titulo;  //Nuevos valores
-            query.CategoriaId = entity.CategoriaId;
+            query.CategoryId = entity.CategoryId;
             query.Subtitulo = entity.Subtitulo;
             query.FechaPublicacion = entity.FechaPublicacion;
             query.Descripcion = entity.Descripcion;
@@ -45,7 +45,7 @@ namespace K2E.DataAcess
 
         public List<Course> GetAll()
         {
-            return _context.Courses.ToList();
+            return _context.Courses.Include("Category").Include("Instructor").ToList();
 
         }
 

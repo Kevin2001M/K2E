@@ -57,9 +57,9 @@
     <Compile Include="CourseDAL.cs" />
     <Compile Include="InstructorDAL.cs" />
     <Compile Include="K2EDBContext.cs" />
-    <Compile Include="Migrations\202311240127261_inicial.cs" />
-    <Compile Include="Migrations\202311240127261_inicial.designer.cs">
-      <DependentUpon>202311240127261_inicial.cs</DependentUpon>
+    <Compile Include="Migrations\202312141712154_courses.cs" />
+    <Compile Include="Migrations\202312141712154_courses.designer.cs">
+      <DependentUpon>202312141712154_courses.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,8 +79,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202311240127261_inicial.resx">
-      <DependentUpon>202311240127261_inicial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202312141712154_courses.resx">
+      <DependentUpon>202312141712154_courses.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
