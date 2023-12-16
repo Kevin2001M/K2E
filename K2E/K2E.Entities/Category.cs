@@ -18,5 +18,7 @@ namespace K2E.Entities
 
         [Required(ErrorMessage = "El campo es requerido")]
         public string Descripcion { get; set; }
+
+       // public List<Course> Courses { get; set; }
     }
 }

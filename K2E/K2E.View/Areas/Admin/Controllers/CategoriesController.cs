@@ -30,6 +30,7 @@ namespace K2E.View.Areas.Admin.Controllers
             CategoryDAL.Instance.Create(entity);
             return RedirectToAction("Index");
         }
+        
 
         [HttpGet]
         public ActionResult Edit(int id)

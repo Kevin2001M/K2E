@@ -4,22 +4,38 @@
 }
 
 <div class="row">
+    <h2 class="fw-bolder text-danger">Accede a todas nuestras categorias</h2>
     @foreach (var item in Model)
     {
         <div class="col-3">
-            <div class="card mb-2">
-                <div class="card-body">
-                    <h5 class="card-title">@item.Nombre</h5>
-                    <p class="card-text">@item.Descripcion</p>
-                    <a href="#" class="btn btn-primary">Ver curso</a>
-                </div>
-            </div>
+
+            
+
+                    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+
+                        <div class="card-body">
+                            <h5 class="card-title">@item.Nombre </h5>
+                            <p class="card-text">@item.Descripcion</p>
+                            <a href="~/Inicio/VerMas/@item.CategoryId" class="btn btn-outline-danger">Ver Cursos</a>
+                        </div>
+                        
+                    </div>
+
+
+
+                    
+
+
+                
         </div>
+
+
+        
     }
 
 
 
-    
+
 
 
 </div>

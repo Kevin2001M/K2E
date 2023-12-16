@@ -43,7 +43,7 @@ namespace K2E.DataAcess
 
         public List<User> GetAll()
         {
-            return _context.Users.ToList();
+            return _context.Users.Include("Rol").ToList();
 
         }
 

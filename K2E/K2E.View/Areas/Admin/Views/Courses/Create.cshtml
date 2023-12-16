@@ -4,11 +4,11 @@
 }
 
 
-<h2>Create</h2>
+
 
 <main>
     <div class="col-12 bg-dark">
-        <div class="card">
+        <div class="bg-secondary rounded h-100 p-4">
             <div class="card-body">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
@@ -20,73 +20,73 @@
                 <div class="row" style="padding:15px">
                     @using (Html.BeginForm("Create", "Courses", FormMethod.Post))
                     {
-                            <div class="form-row">
-                                <div class="form-group">
+                        <div class="form-row">
+                            <div class="form-group">
 
-                                    <label style="font-weight:bold">Titulo</label>
-                                </div>
-                                <div class="form-group">
-                                    <input style="background-color:white" type="text" name="titulo" class="form-control" required placeholder="Escriba el nombre del curso" />
-                                </div>
+                                <label style="font-weight:bold">Titulo</label>
+                            </div>
+                            <div class="form-group">
+                                <input style="background-color:white" type="text" name="titulo" class="form-control" required placeholder="Escriba el nombre del curso" />
+                            </div>
 
-                                <div class="form-group">
+                            <div class="form-group">
 
-                                    <label style="font-weight:bold">Categoría</label>
-                                </div>
-                                <div class="form-group mt-1 mb-1">
-                                    @Html.DropDownList("CategoryId", ViewBag.Categorias as SelectList, "Seleccione una categoría")
-                                    <!--<input style="background-color:white" type="text" name="CategoryId" class="form-control" required placeholder="Ingrese la categoria" />-->
-                                </div>
+                                <label style="font-weight:bold">Categoría</label>
+                            </div>
+                            <div class="form-group mt-1 mb-1">
+                                @Html.DropDownList("CategoryId", ViewBag.Categorias as SelectList, "Seleccione una categoría")
+                                <!--<input style="background-color:white" type="text" name="CategoryId" class="form-control" required placeholder="Ingrese la categoria" />-->
+                            </div>
 
-                                <div class="form-group">
+                            <div class="form-group">
 
-                                    <label style="font-weight:bold">Subtitulo</label>
-                                </div>
-                                <div class="form-group">
-                                    <input style="background-color:white" type="text" name="subtitulo" class="form-control" required placeholder="Escriba el subtitulo del curso" />
-                                </div>
+                                <label style="font-weight:bold">Subtitulo</label>
+                            </div>
+                            <div class="form-group">
+                                <input style="background-color:white" type="text" name="subtitulo" class="form-control" required placeholder="Escriba el subtitulo del curso" />
+                            </div>
 
-                                <div class="form-group">
+                            <div class="form-group">
 
-                                    <label style="font-weight:bold">Fecha</label>
-                                </div>
-                                <div class="form-group">
-                                    <input style="background-color:white" type="date" name="FechaPublicacion" class="form-control" required placeholder="Fecha del curso" />
-                                </div>
+                                <label style="font-weight:bold">Fecha</label>
+                            </div>
+                            <div class="form-group">
+                                <input style="background-color:white" type="date" name="FechaPublicacion" class="form-control" required placeholder="Fecha del curso" />
+                            </div>
 
-                                <div class="form-group">
+                            <div class="form-group">
 
-                                    <label style="font-weight:bold">Descripcion</label>
-                                </div>
-                                <div class="form-group">
-                                    <input style="background-color:white" type="text" name="descripcion" class="form-control" required placeholder="Describa el curso" />
-                                </div>
+                                <label style="font-weight:bold">Descripcion</label>
+                            </div>
+                            <div class="form-group">
+                                <input style="background-color:white" type="text" name="descripcion" class="form-control" required placeholder="Describa el curso" />
+                            </div>
 
-                                <div class="form-group">
+                            <div class="form-group">
 
-                                    <label style="font-weight:bold">Instructor</label>
-                                </div>
-                                <div class="form-group">
-                                    @Html.DropDownList("InstructorId", ViewBag.Instructors as SelectList, "Seleccione un instructor")
-
-                                </div>
-
-                                <div class="form-group mt-1 mb-1">
-                                    <label style="font-weight:bold;">Portada</label>
-                                </div>
-                                <div class="form-group">
-                                    <input style="background-color:white" type="text" name="portada" class="form-control" placeholder="ingrese la portada" />
-                                </div>
-
-                                <div class="form-row mt-3">
-                                    <div class="form-group col-4 offset-lg-1">
-                                        <input type="submit" name="name" value="Guardar" class="btn btn-outline-primary" />
-                                    </div>
-                                </div>
+                                <label style="font-weight:bold">Instructor</label>
+                            </div>
+                            <div class="form-group">
+                                @Html.DropDownList("InstructorId", ViewBag.Instructors as SelectList, "Seleccione un instructor")
 
                             </div>
+
+                            <div class="form-group mt-1 mb-1">
+                                <label style="font-weight:bold;">Portada</label>
+                            </div>
+                            <div class="form-group">
+                                <input style="background-color:white" type="text" name="portada" class="form-control" placeholder="ingrese la portada" />
+                            </div>
+
+                            <div class="form-row mt-3">
+                                <div class="form-group col-4 offset-lg-1">
+                                    <input type="submit" name="name" value="Guardar" class="btn btn-outline-primary" />
+                                </div>
+                            </div>
+
+                        </div>
                     }
-                    </div>
+                </div>
 
             </div>
         </div>

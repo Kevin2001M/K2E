@@ -55,9 +55,11 @@ namespace K2E.DataAcess
             return _context.Categories.FirstOrDefault(x => x.CategoryId.Equals(id));
         }
 
+      
+
         public void Delete(int id)
         {
-            //var query = GetById(id);
+            
             Category entity = GetById(id);
             _context.Categories.Remove(entity);
             Save();

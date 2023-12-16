@@ -59,5 +59,16 @@ namespace K2E.DataAcess
         {
             return _context.SaveChanges();
         }
+
+        public List<Course> GetAllByCategory(int categoryId)
+        {
+            return _context.Courses
+                .Include("Category")
+                .Include("Instructor")
+                .Where(x=>x.CategoryId.Equals(categoryId))
+                .ToList();
+
+        }
+
     }
 }

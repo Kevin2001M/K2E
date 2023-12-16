@@ -19,6 +19,10 @@ namespace K2E.View.Areas.Admin.Controllers
             return View(List);
         }
 
+
+
+
+
         [HttpGet]
         public ActionResult Create()
         {
@@ -34,7 +38,7 @@ namespace K2E.View.Areas.Admin.Controllers
                 Text = c.Nombre  // Concatenar el texto deseado
             }).ToList();
 
-            // Puedes pasar las categorías al modelo de la vista
+            // pasar las categorías al modelo de la vista
             ViewBag.Categorias = new SelectList(selectCategoryListItems, "Value", "Text");
 
             //Lista desplegable de instructores
@@ -48,7 +52,7 @@ namespace K2E.View.Areas.Admin.Controllers
                 Text = i.Nombre //+", "+i.TituloEspecialidad // Concatenar el texto deseado
             }).ToList();
 
-            // Puedes pasar las categorías al modelo de la vista
+            //  pasar las categorías al modelo de la vista
             ViewBag.Instructors = new SelectList(selectInstructorListItems, "Value", "Text");
 
             return View();
@@ -69,32 +73,30 @@ namespace K2E.View.Areas.Admin.Controllers
         public ActionResult Edit(int id)
         {
             Course entity = CourseDAL.Instance.GetById(id);
-            //lista desplegable de categoría
-            // Obtener las categorías para la lista desplegable
+
             List<Category> categorias = CategoryDAL.Instance.GetAll();
 
-            // Crear una lista de objetos SelectListItem especificando tanto el valor como el texto
+ 
             var selectCategoryListItems = categorias.Select(c => new SelectListItem
             {
-                Value = c.CategoryId.ToString(), // Asignar el valor deseado
-                Text = c.Nombre  // Concatenar el texto deseado
+                Value = c.CategoryId.ToString(),
+                Text = c.Nombre  
             }).ToList();
 
-            // Puedes pasar las categorías al modelo de la vista
+            
             ViewBag.Categorias = new SelectList(selectCategoryListItems, "Value", "Text");
 
-            //Lista desplegable de instructores
-            // Obtener las categorías para la lista desplegable
+            
             List<Instructor> instructors = InstructorDAL.Instance.GetAll();
 
-            // Crear una lista de objetos SelectListItem especificando tanto el valor como el texto
+            
             var selectInstructorListItems = instructors.Select(i => new SelectListItem
             {
-                Value = i.InstructorId.ToString(), // Asignar el valor deseado
-                Text = i.Nombre// + ", " + i.TituloEspecialidad // Concatenar el texto deseado
+                Value = i.InstructorId.ToString(), 
+                Text = i.Nombre
             }).ToList();
 
-            // Puedes pasar las categorías al modelo de la vista
+           
             ViewBag.Instructors = new SelectList(selectInstructorListItems, "Value", "Text");
 
             return View(entity);

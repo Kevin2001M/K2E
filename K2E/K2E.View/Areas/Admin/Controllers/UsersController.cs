@@ -28,6 +28,7 @@ namespace K2E.View.Areas.Admin.Controllers
         [HttpPost]
         public ActionResult Create(User entity)
         {
+ 
             UserDAL.Instance.Create(entity);
             return RedirectToAction("Index");
         }

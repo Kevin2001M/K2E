@@ -243,6 +243,10 @@
     <Content Include="Areas\Admin\Views\Categories\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Categories\Edit.cshtml" />
     <Content Include="Views\Inicio\Index.cshtml" />
+    <Content Include="Views\Inicio\MostrarCursos.cshtml" />
+    <Content Include="Views\Inicio\MostrarInstructores.cshtml" />
+    <Content Include="Views\Inicio\Inicio.cshtml" />
+    <Content Include="Views\Inicio\VerMas.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

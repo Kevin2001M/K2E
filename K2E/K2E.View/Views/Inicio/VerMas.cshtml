@@ -1,0 +1,30 @@
+﻿
+@model List<K2E.Entities.Course>
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row">
+    <h2 class="fw-bolder text-danger">listado de cursos</h2>
+    @foreach (var item in Model)
+    {
+        <div class="col-3">
+
+            <div class="card text-white bg-dark mb-3" style="max-width: 18rem; border-left-width: thin;">
+                <div class="card-header">@item.Titulo</div>
+                <div class="card-body">
+                    <h5 class="card-title">@item.Subtitulo</h5>
+                    <p class="card-text">@item.Descripcion</p>
+
+                </div>
+            </div>
+        </div>
+
+            }
+
+
+
+
+
+
+        </div>
